@@ -29,7 +29,7 @@ def main():
     lines = [x.strip() for x in lines] 
 
     for n in lines:
-        response = requests.get(f'{api_url}?n={n}')
+        response = requests.get(f'{api_url}?n={int(n)}')
         json_data = json.loads(response.text[9:])
         result = 'error' if json_data['error'] else int(json_data['premio'])
         print(f'El número {int(n):05} tiene un premio de: {result}')
