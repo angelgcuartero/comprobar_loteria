@@ -1,6 +1,8 @@
 # Comprobar Lotería
 Programa para comprobar una lista de números de la lotería nacional usando el API de El País, para ahorrar tiempo revisando los resultados.
 
+Como ejemplo, incluye una lista de números para comprobar el uso.
+
 Para más información sobre dicho API, por favor, visite [su página de documentación](https://servicios.elpais.com/sorteos/loteria-navidad/api/ "API de El País").
 
 # Descargo de responsabilidad: 
