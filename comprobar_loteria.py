@@ -31,7 +31,7 @@ def main():
     try:
         lines = [int(x.strip()) for x in lines]
     except ValueError:
-        print('\nAsegúrese de que en cada línea sólo haya un número y tienen formato correcto.\n')
+        print('\nAsegúrese de que en cada línea sólo haya un número y de que tenga el formato correcto.\n')
         return 1
 
     # Dar la fecha del sorteo para estos resultados
