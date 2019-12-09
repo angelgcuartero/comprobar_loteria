@@ -1,6 +1,8 @@
 # Comprobar Lotería
 Programa para comprobar una lista de números de la lotería nacional usando el API de El País.
 
+Para más información sobre dicho API, por favor, visite [su página de documentación](https://servicios.elpais.com/sorteos/loteria-navidad/api/ "API de El País").
+
 ## Preparación
 1. Crear un entorno virtual para Python. La versión requerida es 3.5 ó posterior.
 2. Instalar en el mismo las dependencias:
