@@ -19,5 +19,5 @@ Para más información sobre dicho API, por favor, visite [su página de documen
 1. Crear un fichero con la lista de números que se quieren comprobar, introduciendo solamente un número por línea. Se adjunta un fichero de ejemplo llamado ```numeros.txt``` para verificar.
 2. Ejecutar el programa python:
     ```shell
-    $> comprobar_lotería.py <numeros.txt>
+    $> comprobar_lotería.py numeros.txt
     ```
