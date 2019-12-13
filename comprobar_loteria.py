@@ -60,7 +60,7 @@ def main():
         response = requests.get(f'{api_url}?n={n}')
         json_data = json.loads(response.text[response.text.find('{'):])
         result = 'error' if json_data['error'] else int(json_data['premio'])
-        print(f'El número {n:05} tiene un premio de: {result}')
+        print(f'El número {n:05} tiene un premio de: {result:_}')
     
     print()
     return 0
