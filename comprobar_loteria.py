@@ -11,6 +11,14 @@ api_url = 'http://api.elpais.com/ws/LoteriaNavidadPremiados'
 # api_url + '?n=33488' --> comprueba el número 33488
 # api_url + '?s=1'  --> pide status del sorteo
 
+status_msg = [
+    "El sorteo no ha comenzado aún. Todos los números aparecerán como no premiados.",
+    "El sorteo ha empezado. La lista de números premiados se va cargando poco a poco. \nUn número premiado podría llegar a tardar unos minutos en aparecer.",
+    "El sorteo ha terminado y la lista de números y premios debería ser la correcta aunque, tomada al oído, no podemos estar seguros de ella.",
+    "El sorteo ha terminado y existe una lista oficial en PDF.",
+    "El sorteo ha terminado y la lista de números y premios está basada en la oficial. \nDe todas formas, recuerda que la única lista oficial es la que publica la ONLAE y deberías comprobar todos tus números contra ella."
+]
+
 def main():
     """Recibe una lista de números en un fichero, uno en cada línea, y devuelve el premio"""
     
@@ -43,13 +51,6 @@ def main():
         print(f'\nLos resultados para este sorteo son de fecha: {tm_st}\n')
 
     # Dar la situación del sorteo
-    status_msg = [
-        "El sorteo no ha comenzado aún. Todos los números aparecerán como no premiados.",
-        "El sorteo ha empezado. La lista de números premiados se va cargando poco a poco. \nUn número premiado podría llegar a tardar unos minutos en aparecer.",
-        "El sorteo ha terminado y la lista de números y premios debería ser la correcta aunque, tomada al oído, no podemos estar seguros de ella.",
-        "El sorteo ha terminado y existe una lista oficial en PDF.",
-        "El sorteo ha terminado y la lista de números y premios está basada en la oficial. \nDe todas formas, recuerda que la única lista oficial es la que publica la ONLAE y deberías comprobar todos tus números contra ella."
-    ]
     response = requests.get(f'{api_url}?s=1')
     json_data = json.loads(response.text[response.text.find('{'):])
     if not json_data['error']:
