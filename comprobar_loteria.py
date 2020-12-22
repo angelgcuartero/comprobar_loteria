@@ -29,15 +29,14 @@ def main():
 
     input_file = sys.argv[1]
 
+    # Sacar la lista de números del fichero
     try:
         with open(input_file) as in_f:
             lines = in_f.readlines()
+            numbers = [int(x.strip()) for x in lines]
     except FileNotFoundError:
         print(f'\nNo se encuentra el fichero {input_file}\n')
         return 1
-        
-    try:
-        lines = [int(x.strip()) for x in lines]
     except ValueError:
         print('\nAsegúrese de que en cada línea sólo haya un número y de que tenga el formato correcto.\n')
         return 1
@@ -57,7 +56,7 @@ def main():
         print(f'{status_msg[json_data["status"]]}\n')
 
     # Dar los premios para cada número
-    for n in lines:
+    for n in numbers:
         response = requests.get(f'{api_url}?n={n}')
         json_data = json.loads(response.text[response.text.find('{'):])
         result = 'error' if json_data['error'] else int(json_data['premio'])
