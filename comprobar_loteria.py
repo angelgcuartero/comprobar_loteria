@@ -33,7 +33,7 @@ def main():
     try:
         with open(input_file) as in_f:
             lines = in_f.readlines()
-            numbers = [int(x.strip()) for x in lines]
+        numbers = [int(x.strip()) for x in lines]
     except FileNotFoundError:
         print(f'\nNo se encuentra el fichero {input_file}\n')
         return 1
