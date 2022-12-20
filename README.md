@@ -12,12 +12,12 @@ Para más información sobre dicho API, por favor, visite [su página de documen
 1. Crear un entorno virtual para Python. La versión requerida es 3.5 ó posterior. Si necesitas información sobre esto, puedes pulsar [aquí](https://www.google.com/search?hl=es&q=entorno%20virtual%20python).
 2. Instalar en el mismo las dependencias:
     ```shell
-    $> pip install -r requirements.txt
+    pip install -r requirements.txt
     ```
 
 ## Uso
 1. Crear un fichero con la lista de números que se quieren comprobar, introduciendo solamente un número por línea. Se adjunta un fichero de ejemplo llamado ```numeros.txt``` para verificar.
-2. Asigna permisos de ejecución al script python y lánzalo:
+2. Lánzalo:
     ```shell
-    $> comprobar_lotería.py numeros.txt
+    pyhton comprobar_lotería.py numeros.txt
     ```
